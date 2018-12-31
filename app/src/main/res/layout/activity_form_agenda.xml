@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="robbyturnip333.gmail.com.siperan.FormAgenda">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="10dp">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/form_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            app:title="JADWAL"
+            app:titleMarginStart="100dp"
+            app:titleTextColor="@android:color/black">
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/acara"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:text="Seminar Pra Skripsi"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp" />
+
+
+    <EditText
+        android:id="@+id/nim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:text="155410114"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"/>
+    <EditText
+        android:id="@+id/nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:text="Robby Maulana Turnip"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/judul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:text="Analisis UI/UX Android"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:gravity="center|center_vertical|center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/dosen1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center_horizontal|center"
+                    android:text="Narasumber 1\t\t\t\t"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+                <Spinner
+                    android:id="@+id/sp_dosen1"
+                    android:textSize="16sp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scrollbarSize="24dp"
+                    android:entries="@array/spinner_dosen">
+                </Spinner>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:gravity="center|center_vertical|center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/dosen2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center_horizontal|center"
+                    android:text="Narasumber 2\t\t\t\t"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+                <Spinner
+                    android:id="@+id/sp_dosen2"
+                    android:textSize="16sp"
+                    android:entries="@array/spinner_dosen"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                </Spinner>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:gravity="center|center_vertical|center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/dosen3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center_horizontal|center"
+                    android:text="Narasumber 3\t\t\t\t"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+                <Spinner
+                    android:id="@+id/sp_dosen3"
+                    android:textSize="16sp"
+                    android:entries="@array/spinner_dosen"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                </Spinner>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:gravity="center|center_vertical|center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp">
+                <TextView
+                    android:id="@+id/ruang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/black"
+                    android:text="Ruang\t\t\t\t\t\t\t\t\t\t\t\t\t" />
+                <Spinner
+                    android:id="@+id/sp_ruang"
+                    android:textSize="16sp"
+                    android:entries="@array/spinner_ruang"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                </Spinner>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:gravity="center|center_vertical|center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/waktu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center_horizontal|center"
+                    android:text="Waktu\t\t\t\t\t\t\t\t\t\t\t\t\t"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Selasa, 1 Januari 2019"
+                    android:textSize="16sp"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp">
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_margin="2dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardElevation="1dp"
+    app:cardCornerRadius="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:background="@android:color/white">
+            <TextView
+                android:id="@+id/title"
+                android:layout_weight="1"
+                android:text="Semiinar Pra Skripsi"
+                android:textSize="18sp"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/name_mhs"
+                android:layout_weight="1"
+                android:text="Robby Maulana Turnip"
+                android:gravity="center|center_vertical|center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/nim_mhs"
+                android:layout_weight="1"
+                android:text="155410114"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center|center_vertical|center_horizontal"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/action"
+                android:layout_weight="1"
+                android:layout_marginLeft="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@drawable/ic_add_alarm" />
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_weight="1"
+                    android:text="13:00"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:gravity="center|center_vertical|center_horizontal"
+                    android:layout_height="match_parent" />
+
+                <Switch
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:checked="false"
+                    android:textOff="OFF"
+                    android:textOn="ON"
+                    android:visibility="visible"
+                    tools:checked="false" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/room"
+                    android:layout_weight="1"
+                    android:text="B.1.1"
+                    android:textSize="17sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </android.support.v7.widget.CardView>

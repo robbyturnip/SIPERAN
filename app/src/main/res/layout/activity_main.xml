@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/mytoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:title="JADWAL PENGAJARAN"
+            app:titleMarginStart="110dp"
+            app:titleTextAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            app:titleTextColor="@android:color/white">
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <com.applandeo.materialcalendarview.CalendarView
+        android:id="@+id/calender"
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        app:datePicker="true"
+        app:headerColor="@color/colorPrimary"
+        app:headerLabelColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar"
+        app:selectionColor="@color/colorAccent"
+        app:todayLabelColor="@color/colorPrimary">
+
+    </com.applandeo.materialcalendarview.CalendarView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="@color/colorAccent"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="@+id/calender"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/colorAccent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calender"
+        app:layout_constraintVertical_bias="0.0">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</android.support.constraint.ConstraintLayout>
+
