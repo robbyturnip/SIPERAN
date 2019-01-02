@@ -145,9 +145,6 @@ public class MainActivity extends AppCompatActivity {
         reminder.setTanggal(getIntent().getStringExtra("tanggal"));
         reminder.setWaktu(getIntent().getStringExtra("waktu"));
         reminder.setRuang(getIntent().getStringExtra("ruang"));
-        reminder.setNarasumber1(getIntent().getStringExtra("narasumber1"));
-        reminder.setNarasumber2(getIntent().getStringExtra("narasumber2"));
-        reminder.setNarasumber3(getIntent().getStringExtra("narasumber3"));
         reminders.add(reminder);
 
     }

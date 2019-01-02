@@ -93,15 +93,7 @@
                     android:text="Narasumber 1\t\t\t\t"
                     android:textColor="@android:color/black"
                     android:textSize="24sp" />
-                <Spinner
-                    android:id="@+id/sp_dosen1"
-                    android:textSize="16sp"
-                    android:layout_width="fill_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:scrollbarSize="24dp"
-                    android:entries="@array/spinner_dosen">
-                </Spinner>
+
 
 
             </LinearLayout>
@@ -123,15 +115,7 @@
                     android:text="Narasumber 2\t\t\t\t"
                     android:textColor="@android:color/black"
                     android:textSize="24sp" />
-                <Spinner
-                    android:id="@+id/sp_dosen2"
-                    android:textSize="16sp"
-                    android:layout_width="fill_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:scrollbarSize="24dp"
-                    android:entries="@array/spinner_dosen">
-                </Spinner>
+
 
 
             </LinearLayout>
@@ -153,15 +137,6 @@
                     android:text="Narasumber 3\t\t\t\t"
                     android:textColor="@android:color/black"
                     android:textSize="24sp" />
-                <Spinner
-                    android:id="@+id/sp_dosen3"
-                    android:textSize="16sp"
-                    android:layout_width="fill_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:scrollbarSize="24dp"
-                    android:entries="@array/spinner_dosen">
-                </Spinner>
 
 
             </LinearLayout>
@@ -183,15 +158,6 @@
                     android:text="Ruang\t\t\t\t\t\t\t\t\t\t\t\t\t"
                     android:textColor="@android:color/black"
                     android:textSize="24sp" />
-                <Spinner
-                    android:id="@+id/sp_ruang"
-                    android:textSize="16sp"
-                    android:layout_width="fill_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:scrollbarSize="24dp"
-                    android:entries="@array/spinner_ruang">
-                </Spinner>
 
 
             </LinearLayout>

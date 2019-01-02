@@ -3,6 +3,8 @@ package robbyturnip333.gmail.com.siperan;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,9 +16,8 @@ import java.util.Date;
 
 public class FormAgenda extends AppCompatActivity {
    android.support.v7.widget.Toolbar toolbar;
-   Button simpan;
    EditText acara,nim,nama,judul;
-   Spinner narasumber1,narasumber2,narasumber3,ruang;
+   Spinner ruang;
    TextView tanggal;
 
     @Override
@@ -31,28 +32,30 @@ public class FormAgenda extends AppCompatActivity {
         nama=findViewById(R.id.nama);
         judul=findViewById(R.id.judul);
         ruang=findViewById(R.id.sp_ruang);
-        narasumber1=findViewById(R.id.sp_dosen1);
-        narasumber2=findViewById(R.id.sp_dosen2);
-        narasumber3=findViewById(R.id.sp_dosen3);
         tanggal=findViewById(R.id.tanggal);
         tanggal.setText(getIntent().getStringExtra("tanggal"));
-        simpan=findViewById(R.id.simpan);
-        simpan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(FormAgenda.this,MainActivity.class);
-                intent.putExtra("acara",acara.getText().toString());
-                intent.putExtra("nim",nim.getText().toString());
-                intent.putExtra("nama",nama.getText().toString());
-                intent.putExtra("judul",judul.getText().toString());
-                intent.putExtra("tanggal",tanggal.getText().toString());
-                intent.putExtra("waktu","10:00");
-                intent.putExtra("ruang",ruang.getSelectedItem().toString());
-                intent.putExtra("narasumber1",narasumber1.getSelectedItem().toString());
-                intent.putExtra("narasumber2",narasumber2.getSelectedItem().toString());
-                intent.putExtra("narasumber3",narasumber3.getSelectedItem().toString());
-                startActivity(intent);
-            }
-        });
+
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.form_menu, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem menuItem){
+        int id= menuItem.getItemId();
+        if(id==R.id.simpan){
+            Intent intent=new Intent(FormAgenda.this,MainActivity.class);
+            intent.putExtra("acara",acara.getText().toString());
+            intent.putExtra("nim",nim.getText().toString());
+            intent.putExtra("nama",nama.getText().toString());
+            intent.putExtra("judul",judul.getText().toString());
+            intent.putExtra("tanggal",tanggal.getText().toString());
+            intent.putExtra("waktu","10:00");
+            intent.putExtra("ruang",ruang.getSelectedItem().toString());
+            startActivity(intent);
+            return true;
+        }
+        return  super.onOptionsItemSelected(menuItem);
     }
 }
