@@ -1,5 +1,6 @@
 package robbyturnip333.gmail.com.siperan;
 
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,13 +11,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toolbar;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public class FormAgenda extends AppCompatActivity {
    android.support.v7.widget.Toolbar toolbar;
-   EditText nim,nama,judul;
+   EditText nim,nama,judul,waktu;
    Spinner ruang,acara;
    TextView tanggal;
 
@@ -32,8 +35,26 @@ public class FormAgenda extends AppCompatActivity {
         nama=findViewById(R.id.nama);
         judul=findViewById(R.id.judul);
         ruang=findViewById(R.id.sp_ruang);
+        waktu=findViewById(R.id.waktu);
         tanggal=findViewById(R.id.tanggal);
         tanggal.setText(getIntent().getStringExtra("tanggal"));
+        waktu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Calendar calendar=Calendar.getInstance();
+                int hour=calendar.get(Calendar.HOUR_OF_DAY);
+                int minute=calendar.get(Calendar.MINUTE);
+                TimePickerDialog timePickerDialog;
+                timePickerDialog=new TimePickerDialog(FormAgenda.this, new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                        waktu.setText(String.valueOf(hourOfDay)+":"+String.valueOf(minute));
+                    }
+                },hour,minute,true);
+                timePickerDialog.setTitle("Pilih Waktu");
+                timePickerDialog.show();
+            }
+        });
 
     }
 
@@ -51,7 +72,7 @@ public class FormAgenda extends AppCompatActivity {
             intent.putExtra("nama",nama.getText().toString());
             intent.putExtra("judul",judul.getText().toString());
             intent.putExtra("tanggal",tanggal.getText().toString());
-            intent.putExtra("waktu","10:00");
+            intent.putExtra("waktu",waktu.getText().toString());
             intent.putExtra("ruang",ruang.getSelectedItem().toString());
             startActivity(intent);
             return true;

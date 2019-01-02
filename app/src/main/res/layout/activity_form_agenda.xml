@@ -71,6 +71,7 @@
                 <Spinner
                     android:id="@+id/sp_acara"
                     android:textSize="16sp"
+                    android:gravity="center"
                     android:layout_width="fill_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1">
@@ -95,13 +96,16 @@
                     android:gravity="center"
                     android:textColor="@android:color/black"
                     android:text="Waktu\t\t\t\t\t\t\t" />
-                <Spinner
-                    android:id="@+id/sp_waktu"
+                <EditText
+                    android:id="@+id/waktu"
                     android:textSize="16sp"
+                    android:gravity="center"
+                    android:hint="Click"
+                    android:textColor="@android:color/black"
                     android:layout_width="fill_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1">
-                </Spinner>
+                </EditText>
 
             </LinearLayout>
             <LinearLayout
@@ -124,6 +128,7 @@
                 <Spinner
                     android:id="@+id/sp_ruang"
                     android:textSize="16sp"
+                    android:gravity="center"
                     android:layout_width="fill_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1">
