@@ -40,6 +40,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appbar">
+
         <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -53,17 +54,16 @@
                 android:orientation="vertical">
 
                 <CalendarView
-                    android:id="@+id/calendarView"
+                    android:id="@+id/calender"
                     android:layout_width="match_parent"
-                    android:layout_height="400dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginEnd="20dp"
                     android:layout_marginStart="20dp"
                     app:layout_constraintBottom_toTopOf="@+id/recyclerView"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    >
+                    app:layout_constraintTop_toTopOf="parent">
 
                 </CalendarView>
 
@@ -74,7 +74,7 @@
                     android:layout_marginEnd="20dp"
                     android:background="@color/colorAccent"
                     android:src="@drawable/ic_add"
-                    app:layout_constraintBottom_toBottomOf="@+id/calendarView"
+                    app:layout_constraintBottom_toTopOf="@+id/recyclerView"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:rippleColor="@color/colorAccent" />
 
