@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="#FAFAFA"
     android:orientation="vertical"
     tools:context="robbyturnip333.gmail.com.siperan.FormAgenda">
     <android.support.design.widget.AppBarLayout
@@ -15,7 +15,7 @@
             android:id="@+id/form_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/white"
+            android:background="#F5F5F5"
             app:title="JADWAL"
             app:titleTextColor="@android:color/black">
         </android.support.v7.widget.Toolbar>
