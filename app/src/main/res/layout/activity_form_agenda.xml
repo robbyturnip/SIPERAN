@@ -50,49 +50,7 @@
         android:background="#EEEEEE"
         android:layout_height="5dp" />
 
-    <EditText
-        android:id="@+id/acara"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textColor="@android:color/black"
-        android:hint="Acara"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="15dp" />
 
-
-    <EditText
-        android:id="@+id/nim"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textColor="@android:color/black"
-        android:hint="Nomor Induk Mahasiswa"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="15dp"/>
-    <EditText
-        android:id="@+id/nama"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textColor="@android:color/black"
-        android:hint="Mahasiswa"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="15dp"/>
-
-    <EditText
-        android:id="@+id/judul"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textColor="@android:color/black"
-        android:hint="Judul"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="15dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -107,6 +65,34 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:textSize="24sp"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:text="Acara\t\t\t\t\t\t\t" />
+                <Spinner
+                    android:id="@+id/sp_acara"
+                    android:textSize="16sp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                </Spinner>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:gravity="center|center_vertical|center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="24sp"
+                    android:gravity="center"
                     android:textColor="@android:color/black"
                     android:text="Waktu\t\t\t\t\t\t\t" />
                 <Spinner
@@ -132,6 +118,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:textSize="24sp"
+                    android:gravity="center"
                     android:textColor="@android:color/black"
                     android:text="Ruang\t\t\t\t\t\t\t" />
                 <Spinner
@@ -143,6 +130,37 @@
                 </Spinner>
 
             </LinearLayout>
+            <EditText
+                android:id="@+id/nim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="@android:color/black"
+                android:hint="Nomor Induk Mahasiswa"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"/>
+            <EditText
+                android:id="@+id/nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="@android:color/black"
+                android:hint="Mahasiswa"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/judul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="@android:color/black"
+                android:hint="Judul"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="10dp"

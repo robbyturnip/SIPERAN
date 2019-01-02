@@ -16,8 +16,8 @@ import java.util.Date;
 
 public class FormAgenda extends AppCompatActivity {
    android.support.v7.widget.Toolbar toolbar;
-   EditText acara,nim,nama,judul;
-   Spinner ruang;
+   EditText nim,nama,judul;
+   Spinner ruang,acara;
    TextView tanggal;
 
     @Override
@@ -27,7 +27,7 @@ public class FormAgenda extends AppCompatActivity {
         toolbar=findViewById(R.id.form_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        acara=findViewById(R.id.acara);
+        acara=findViewById(R.id.sp_acara);
         nim=findViewById(R.id.nim);
         nama=findViewById(R.id.nama);
         judul=findViewById(R.id.judul);
@@ -46,7 +46,7 @@ public class FormAgenda extends AppCompatActivity {
         int id= menuItem.getItemId();
         if(id==R.id.simpan){
             Intent intent=new Intent(FormAgenda.this,MainActivity.class);
-            intent.putExtra("acara",acara.getText().toString());
+            intent.putExtra("acara",acara.getSelectedItem().toString());
             intent.putExtra("nim",nim.getText().toString());
             intent.putExtra("nama",nama.getText().toString());
             intent.putExtra("judul",judul.getText().toString());
