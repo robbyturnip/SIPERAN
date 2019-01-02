@@ -21,7 +21,7 @@ public class Recycler extends RecyclerView.Adapter<Recycler.MyRecycle> {
 
     public class MyRecycle extends RecyclerView.ViewHolder{
         Reminder reminder;
-        TextView acara,nama,nims,waktu,ruang;
+        TextView acara,nama,nims,waktu,ruang,tanggal;
         public MyRecycle(View view){
             super(view);
             acara=view.findViewById(R.id.acara);
@@ -29,6 +29,7 @@ public class Recycler extends RecyclerView.Adapter<Recycler.MyRecycle> {
             nims=view.findViewById(R.id.nim_mhs);
             waktu=view.findViewById(R.id.time);
             ruang=view.findViewById(R.id.room);
+            tanggal=view.findViewById(R.id.date);
         }
     }
     public MyRecycle onCreateViewHolder(ViewGroup viewGroup,int index){
@@ -42,6 +43,7 @@ public class Recycler extends RecyclerView.Adapter<Recycler.MyRecycle> {
         myRecycle.acara.setText(reminder.getAcara());
         myRecycle.nama.setText(reminder.getNama());
         myRecycle.nims.setText(reminder.getNim());
+        myRecycle.tanggal.setText(reminder.getTanggal());
         myRecycle.waktu.setText(reminder.getWaktu());
         myRecycle.ruang.setText(reminder.getRuang());
         myRecycle.reminder=reminder;

@@ -16,8 +16,8 @@ public class FormAgenda extends AppCompatActivity {
    android.support.v7.widget.Toolbar toolbar;
    Button simpan;
    EditText acara,nim,nama,judul;
-   Spinner narasumber1,narasumber2,narasumber3;
-   TextView waktu;
+   Spinner narasumber1,narasumber2,narasumber3,ruang;
+   TextView tanggal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +30,12 @@ public class FormAgenda extends AppCompatActivity {
         nim=findViewById(R.id.nim);
         nama=findViewById(R.id.nama);
         judul=findViewById(R.id.judul);
+        ruang=findViewById(R.id.sp_ruang);
         narasumber1=findViewById(R.id.sp_dosen1);
         narasumber2=findViewById(R.id.sp_dosen2);
         narasumber3=findViewById(R.id.sp_dosen3);
-        waktu=findViewById(R.id.waktu);
-        waktu.setText(getIntent().getStringExtra("waktu"));
+        tanggal=findViewById(R.id.tanggal);
+        tanggal.setText(getIntent().getStringExtra("tanggal"));
         simpan=findViewById(R.id.simpan);
         simpan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,11 +45,13 @@ public class FormAgenda extends AppCompatActivity {
                 intent.putExtra("nim",nim.getText().toString());
                 intent.putExtra("nama",nama.getText().toString());
                 intent.putExtra("judul",judul.getText().toString());
+                intent.putExtra("tanggal",tanggal.getText().toString());
+                intent.putExtra("waktu","10:00");
+                intent.putExtra("ruang",ruang.getSelectedItem().toString());
                 intent.putExtra("narasumber1",narasumber1.getSelectedItem().toString());
                 intent.putExtra("narasumber2",narasumber2.getSelectedItem().toString());
                 intent.putExtra("narasumber3",narasumber3.getSelectedItem().toString());
                 startActivity(intent);
-
             }
         });
     }

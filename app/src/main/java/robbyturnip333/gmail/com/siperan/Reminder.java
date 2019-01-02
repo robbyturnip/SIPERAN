@@ -5,13 +5,14 @@ package robbyturnip333.gmail.com.siperan;
  */
 
 public class Reminder {
-    String acara,nama,nim,judul,waktu,ruang,narasumber1,narasumber2,narasumber3;
+    String acara,nama,nim,judul,tanggal,waktu,ruang,narasumber1,narasumber2,narasumber3;
     public Reminder(){};
 
-    public Reminder(String Acara, String nama, String nim, String judul,String waktu, String ruang, String narasumber1, String narasumber2, String narasumber3){
+    public Reminder(String Acara, String nama, String nim, String judul, String tanggal, String waktu, String ruang, String narasumber1, String narasumber2, String narasumber3){
         this.acara=acara;
         this.nama=nama;
         this.nim=nim;
+        this.tanggal=tanggal;
         this.waktu=waktu;
         this.ruang=ruang;
         this.judul=judul;
@@ -32,6 +33,7 @@ public class Reminder {
     public void setJudul(String judul){
         this.judul=judul;
     }
+    public void setTanggal(String tanggal){this.tanggal=tanggal; }
     public void setWaktu(String waktu){
         this.waktu=waktu;
     }
@@ -57,6 +59,7 @@ public class Reminder {
     public String getJudul(){
         return judul;
     }
+    public String getTanggal(){return tanggal;}
     public String getWaktu(){
         return waktu;
     }

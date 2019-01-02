@@ -131,22 +131,23 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent=new Intent(MainActivity.this,FormAgenda.class);
-                intent.putExtra("waktu",selectedDate);
+                intent.putExtra("tanggal",selectedDate);
                 startActivity(intent);
             }
         });
     }
     public void addData(){
         Reminder reminder=new Reminder();
-        reminder.setAcara("Seminar Judul Skripsi");
-        reminder.setJudul("Analisis UI/UX Android Studio");
-        reminder.setNama("Robby Maulana Turniip");
-        reminder.setNim("155410114");
-        reminder.setWaktu("10:00");
-        reminder.setRuang("B.1.4");
-        reminder.setNarasumber1("Danny Kriestanto S.Kom., M.Eng.");
-        reminder.setNarasumber2("Dini Fakta Sari S.T., M.T.");
-        reminder.setNarasumber3("Ilham Rais Arvianto S.Pd., M.Pd.");
+        reminder.setAcara(getIntent().getStringExtra("acara"));
+        reminder.setJudul(getIntent().getStringExtra("judul"));
+        reminder.setNama(getIntent().getStringExtra("nama"));
+        reminder.setNim(getIntent().getStringExtra("nim"));
+        reminder.setTanggal(getIntent().getStringExtra("tangal"));
+        reminder.setWaktu(getIntent().getStringExtra("waktu"));
+        reminder.setRuang(getIntent().getStringExtra("ruang"));
+        reminder.setNarasumber1(getIntent().getStringExtra("narasumber1"));
+        reminder.setNarasumber2(getIntent().getStringExtra("narasumber2"));
+        reminder.setNarasumber3(getIntent().getStringExtra("narasumber3"));
         reminders.add(reminder);
 
     }
