@@ -19,7 +19,6 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             app:title="JADWAL PENGAJARAN"
-            app:titleMarginStart="110dp"
             app:titleTextAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
             app:titleTextColor="@android:color/white">
 

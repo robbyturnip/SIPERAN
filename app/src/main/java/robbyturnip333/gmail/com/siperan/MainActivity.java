@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
         reminder.setJudul(getIntent().getStringExtra("judul"));
         reminder.setNama(getIntent().getStringExtra("nama"));
         reminder.setNim(getIntent().getStringExtra("nim"));
-        reminder.setTanggal(getIntent().getStringExtra("tangal"));
+        reminder.setTanggal(getIntent().getStringExtra("tanggal"));
         reminder.setWaktu(getIntent().getStringExtra("waktu"));
         reminder.setRuang(getIntent().getStringExtra("ruang"));
         reminder.setNarasumber1(getIntent().getStringExtra("narasumber1"));
