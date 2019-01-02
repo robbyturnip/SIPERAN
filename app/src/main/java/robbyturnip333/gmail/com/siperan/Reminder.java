@@ -5,43 +5,71 @@ package robbyturnip333.gmail.com.siperan;
  */
 
 public class Reminder {
-    String mytitle,name,nim,mytime,room;
-    public Reminder(String title, String name, String nim, String time, String room){
-        this.mytitle=title;
-        this.name=name;
+    String acara,nama,nim,judul,waktu,ruang,narasumber1,narasumber2,narasumber3;
+    public Reminder(){};
+
+    public Reminder(String Acara, String nama, String nim, String judul,String waktu, String ruang, String narasumber1, String narasumber2, String narasumber3){
+        this.acara=acara;
+        this.nama=nama;
         this.nim=nim;
-        this.mytime=time;
-        this.room=room;
+        this.waktu=waktu;
+        this.ruang=ruang;
+        this.judul=judul;
+        this.narasumber1=narasumber1;
+        this.narasumber2=narasumber2;
+        this.narasumber3=narasumber3;
     }
 
-    public void setMytitle(String title){
-        this.mytitle=title;
+    public void setAcara(String acara){
+        this.acara=acara;
     }
-    public  void setName(String name){
-        this.name=name;
+    public  void setNama(String nama){
+        this.nama=nama;
     }
     public void setNim(String nim){
         this.nim=nim;
     }
-    public void setMytime(String time){
-        this.mytime=time;
+    public void setJudul(String judul){
+        this.judul=judul;
     }
-    public void  setRoom(String room){
-        this.room=room;
+    public void setWaktu(String waktu){
+        this.waktu=waktu;
     }
-    public String getMytitle(){
-        return mytitle;
+    public void  setRuang(String ruang){this.ruang=ruang;}
+    public void setNarasumber1(String narasumber1){
+        this.narasumber1=narasumber1;
     }
-    public String getName(){
-        return name;
+    public void setNarasumber2(String narasumber2){
+        this.narasumber2=narasumber2;
+    }
+    public void setNarasumber3(String narasumber3){
+        this.narasumber3=narasumber3;
+    }
+    public String getAcara(){
+        return acara;
+    }
+    public String getNama(){
+        return nama;
     }
     public String getNim(){
         return nim;
     }
-    public String getMytime(){
-        return mytime;
+    public String getJudul(){
+        return judul;
     }
-    public String getRoom(){
-        return room;
+    public String getWaktu(){
+        return waktu;
+    }
+    public String getRuang(){
+        return ruang;
+    }
+    public String getNarasumber1(){
+        return narasumber1;
+    }
+    public String getNarasumber2(){
+        return narasumber2;
+    }
+    public String getNarasumber3(){
+        return narasumber3;
     }
 }

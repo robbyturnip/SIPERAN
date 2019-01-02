@@ -197,7 +197,7 @@
                 android:layout_marginTop="15dp">
 
                 <TextView
-                    android:id="@+id/waktu"
+
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical|center_horizontal|center"
@@ -206,14 +206,26 @@
                     android:textSize="24sp" />
 
                 <TextView
+                    android:id="@+id/waktu"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
                     android:text="Selasa, 1 Januari 2019"
-                    android:textSize="16sp"></TextView>
+                    android:textSize="16sp"/>
 
             </LinearLayout>
+            <Button
+                android:id="@+id/simpan"
+                android:background="@color/colorPrimary"
+                android:text="SIMPAN"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="10dp"

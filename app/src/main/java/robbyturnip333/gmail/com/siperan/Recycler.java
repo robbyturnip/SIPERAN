@@ -1,5 +1,6 @@
 package robbyturnip333.gmail.com.siperan;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by robby on 24/12/18.
@@ -14,14 +16,15 @@ import java.util.ArrayList;
 
 public class Recycler extends RecyclerView.Adapter<Recycler.MyRecycle> {
     public ArrayList<Reminder> reminders;
-    public  Recycler(ArrayList<Reminder> reminder){
-        this.reminders=reminder;
-    }
+
+    public  Recycler(ArrayList<Reminder> reminder){this.reminders=reminder;}
+
     public class MyRecycle extends RecyclerView.ViewHolder{
-        TextView judul,nama,nims,waktu,ruang;
+        Reminder reminder;
+        TextView acara,nama,nims,waktu,ruang;
         public MyRecycle(View view){
             super(view);
-            judul=view.findViewById(R.id.title);
+            acara=view.findViewById(R.id.acara);
             nama=view.findViewById(R.id.name_mhs);
             nims=view.findViewById(R.id.nim_mhs);
             waktu=view.findViewById(R.id.time);
@@ -31,18 +34,19 @@ public class Recycler extends RecyclerView.Adapter<Recycler.MyRecycle> {
     public MyRecycle onCreateViewHolder(ViewGroup viewGroup,int index){
         LayoutInflater layoutInflater=LayoutInflater.from(viewGroup.getContext());
         View view=layoutInflater.inflate(R.layout.cardview_reminder,viewGroup,false);
-        return (new MyRecycle(view));
+        MyRecycle myRecycle=new MyRecycle(view);
+        return myRecycle;
     }
     public void onBindViewHolder(MyRecycle myRecycle,int index){
-        myRecycle.judul.setText(reminders.get(index).getMytitle());
-        myRecycle.nama.setText(reminders.get(index).getName());
-        myRecycle.nims.setText(reminders.get(index).getNim());
-        myRecycle.waktu.setText(reminders.get(index).getMytime());
-        myRecycle.ruang.setText(reminders.get(index).getRoom());
+        Reminder reminder=reminders.get(index);
+        myRecycle.acara.setText(reminder.getAcara());
+        myRecycle.nama.setText(reminder.getNama());
+        myRecycle.nims.setText(reminder.getNim());
+        myRecycle.waktu.setText(reminder.getWaktu());
+        myRecycle.ruang.setText(reminder.getRuang());
+        myRecycle.reminder=reminder;
 
     }
-    public int getItemCount(){
-        return (reminders!=null) ? reminders.size():0;
-    }
+    public int getItemCount(){return reminders.size();}
 
 }
