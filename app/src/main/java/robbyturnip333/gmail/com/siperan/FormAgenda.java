@@ -12,8 +12,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 import android.widget.Toolbar;
 
+import java.time.Instant;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -55,14 +57,12 @@ public class FormAgenda extends AppCompatActivity {
                 timePickerDialog.show();
             }
         });
-
     }
 
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.form_menu, menu);
         return true;
     }
-
     public boolean onOptionsItemSelected(MenuItem menuItem){
         int id= menuItem.getItemId();
         if(id==R.id.simpan){
@@ -79,4 +79,7 @@ public class FormAgenda extends AppCompatActivity {
         }
         return  super.onOptionsItemSelected(menuItem);
     }
+
+
+
 }
